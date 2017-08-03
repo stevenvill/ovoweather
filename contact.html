@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel = "stylesheet" type = "text/css" href = "./contact.css" media = "all" />
+  <title> CONTACT US </title>
+</head>
+<body>
+  <div class="container">
+    <center><a href="index.html"><img width="100" height="100" src="./logo.png"></a></center>
+    <center><h3>steven villarreal</h3></center>
+    <center><img class = "img-circle" width="150" height="150" src="me.jpg"></center>
+    <center><h4>creator</h4>
+    <center><h3>you can reach me via email at: <a href="mailto:stevenvillarreal@utexas.edu">stevenvillarreal@utexas.edu</a></h3></center>
+  </div>
+
+  <div id="bg">
+    <img class="img-responsive" id="myImg" src="./bg.gif"/>
+  </div>
+
+</body>
+</html>
+
+<style>
+  html {
+    height: 100%;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    color: #FFF;
+    background: #1B1B1B;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 32px;
+    margin-top: 20px;
+  }
+
+  #bg {
+    opacity: 0.16;
+    z-index: -10;
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+  }
+
+  #bg img {
+    -webkit-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+  }
+
+  .container {
+    padding-top:20px;
+  }
+
+</style>

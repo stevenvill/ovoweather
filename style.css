@@ -1,0 +1,93 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  color: #FFF;
+  background: #1B1B1B;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 100px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.row {
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 32px;
+  margin-top: 20px;
+}
+
+#bg {
+  opacity: 0.16;
+  z-index: -10;
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+}
+
+#bg img {
+  -webkit-filter: blur(5px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
+  
+.container {
+  padding-top:20px;
+}
+
+form {
+  padding-top: 280px;
+}
+
+.control-label {
+  text-transform: uppercase !important;
+  font-size: 34px;
+}
+
+.form-control:focus {
+  border-color: #776a47;
+}
+input {
+  opacity: .35;
+}
+
+.btn-primary {
+  background: #776a47;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 0;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #4e462f !important;
+}
+
+footer { padding-top: 250px; }
