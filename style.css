@@ -1,5 +1,6 @@
 html {
   height: 100%;
+  margin: 0;
 }
 
 body {
@@ -9,19 +10,22 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #FFF;
   background: #1B1B1B;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px;
+  margin: 0;
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -100px;
 }
 
 .footer {
-  position: absolute;
-  bottom: 100px;
-  width: 100%;
   /* Set the fixed height of the footer here */
-  height: 60px;
-  line-height: 60px; /* Vertically center the text there */
+  height: 100px;
+  line-height: 100px; /* Vertically center the text there */
+
 }
 
 .row {
@@ -89,5 +93,3 @@ input {
   color: #fff;
   background-color: #4e462f !important;
 }
-
-footer { padding-top: 250px; }
