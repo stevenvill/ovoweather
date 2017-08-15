@@ -1,3 +1,4 @@
+/*
 $(document).on("click", "#btn", function(){
 	$("h1").fadeOut(1000);
 	$("form").fadeOut(1000, function (){
@@ -5,14 +6,49 @@ $(document).on("click", "#btn", function(){
     	var location = $('#location_id').val();
     	geocoder.geocode( { 'address': location }, function(results, status) {
     	if (status == google.maps.GeocoderStatus.OK) {
-    	    	// alert("location : " + results[0].geometry.location.lat() + " " +results[0].geometry.location.lng());
-    	    	//$("#forecast").fadeIn(3000);
     	    	weatherReport(results[0].geometry.location.lat(), results[0].geometry.location.lng());
     	    } else {
     	        alert("Something went wrong " + status);
     	    }
     	});
     });
+});
+*/
+
+$(document).ready(function() {
+    // enter keyd
+    $('#location_id').bind('keypress', function(e) {
+        if(e.keyCode==13){
+        	alert("Enter in input field clicked!"); // Check if it recognizes Enter in input field (it does)
+            $('#btn').trigger('click');
+        }
+    });
+
+    $('#btn').click(function(){
+    	$("h1").fadeOut(1000);
+		$("form").fadeOut(1000, function (){
+    		var geocoder =  new google.maps.Geocoder();
+    		var location = $('#location_id').val();
+    		geocoder.geocode( { 'address': location }, function(results, status) {
+    			if (status == google.maps.GeocoderStatus.OK) {
+    				weatherReport(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+    	    		} else {
+    	    			alert("Something went wrong " + status);
+    	    	}
+    		});
+   		});
+    });
+});
+
+
+
+
+$('#location_id').keydown(function(event){ 
+    var keyCode = (event.keyCode ? event.keyCode : event.which);   
+    if (keyCode == 13) {
+    	alert("enter clicked");
+        $('#btn').trigger('click');
+    }
 });
 
 function skycons() {
