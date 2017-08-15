@@ -40,17 +40,6 @@ $(document).ready(function() {
     });
 });
 
-
-
-
-$('#location_id').keydown(function(event){ 
-    var keyCode = (event.keyCode ? event.keyCode : event.which);   
-    if (keyCode == 13) {
-    	alert("enter clicked");
-        $('#btn').trigger('click');
-    }
-});
-
 function skycons() {
 	var skycons = new Skycons({"color": "#ebebeb"}),
       list  = [
