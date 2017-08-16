@@ -15,30 +15,21 @@ $(document).on("click", "#btn", function(){
 });
 */
 
-$(document).ready(function() {
-    // enter keyd
-    $('#location_id').bind('keypress', function(e) {
-        if(e.keyCode==13){
-        	alert("Enter in input field clicked!"); // Check if it recognizes Enter in input field (it does)
-            $('#btn').trigger('click');
-        }
+function loadSongs() {
+    $("h1").fadeOut(1000);
+    $("form").fadeOut(1000, function () {
+        var geocoder =  new google.maps.Geocoder();
+        var location = $('#location_id').val();
+        geocoder.geocode( { 'address': location }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                weatherReport(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+            } else {
+                alert("Something went wrong " + status);
+            }
+        });
     });
-
-    $('#btn').click(function(){
-    	$("h1").fadeOut(1000);
-		$("form").fadeOut(1000, function (){
-    		var geocoder =  new google.maps.Geocoder();
-    		var location = $('#location_id').val();
-    		geocoder.geocode( { 'address': location }, function(results, status) {
-    			if (status == google.maps.GeocoderStatus.OK) {
-    				weatherReport(results[0].geometry.location.lat(), results[0].geometry.location.lng());
-    	    		} else {
-    	    			alert("Something went wrong " + status);
-    	    	}
-    		});
-   		});
-    });
-});
+    return false;
+}
 
 function skycons() {
 	var skycons = new Skycons({"color": "#ebebeb"}),

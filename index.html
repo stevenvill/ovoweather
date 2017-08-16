@@ -15,11 +15,11 @@
     <center><h1>Curate an OVO playlist based on the current weather of your desired location</h1></center>
 
     <center>
-    <form class="form-inline">
+    <form class="form-inline" onsubmit="return loadSongs()">
       <div class="form-group">
         <label for="location_id" class="control-label">Location</label>
         <input type="text" class="form-control input-lg" id="location_id" placeholder="city">
-        <button type="button" id="btn" class="btn btn-primary btn-lg">Submit</button>
+        <button type="submit" id="btn" class="btn btn-primary btn-lg">Submit</button>
       </div>
     </form>
     </center>
