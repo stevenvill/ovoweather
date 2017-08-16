@@ -76,7 +76,7 @@ function weatherReport(latitude, longitude) {
 				time     = forecast.currently.time,
 				humidity = forecast.currently.humidity,
 				summary  = forecast.currently.summary,
-				temp    = Math.round(forecast.currently.temperature);
+				temp     = Math.round(forecast.currently.temperature);
 
 		// Append divs
 		$("#forecast").append(
