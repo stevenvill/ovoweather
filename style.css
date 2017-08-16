@@ -41,6 +41,14 @@ h1 {
   margin-top: 20px;
 }
 
+#location_id {
+  padding-left: 0px;
+  padding-bottom: 0px;
+  color: #4e462f;
+  text-align: center;
+  font-size: 25px;
+}
+
 #bg {
   opacity: 0.16;
   z-index: -10;
@@ -79,8 +87,17 @@ form {
 .form-control:focus {
   border-color: #776a47;
 }
-input {
-  opacity: .35;
+
+input[type="text"] {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
+}
+
+input:focus {
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  outline: none !important;
 }
 
 .btn-primary {
