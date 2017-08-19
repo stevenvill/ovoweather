@@ -42,11 +42,13 @@ h1 {
 }
 
 #location_id {
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
   padding-left: 0px;
   padding-bottom: 0px;
-  color: #4e462f;
+  color: #a49262;
   text-align: center;
-  font-size: 25px;
 }
 
 #bg {
