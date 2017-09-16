@@ -80,11 +80,11 @@ function weatherReport(latitude, longitude) {
 
 		// Append divs
 		$("#forecast").append(
-			"<center><h1>Current Weather</h1><div class='graphic'><canvas class=" + skicons + "></canvas></div>" + "<h1>" +
+			"<center><h1>Weather</h1><div class='graphic'><canvas class=" + skicons + "></canvas></div>" + "<h1>" +
 			temp + "&deg; " + summary + "</h1></center>"
 		).hide().fadeIn(2000);
 
-		$("#playlist").append("<center><h1>Current Weather Playlist</h1><iframe src='https://open.spotify.com/embed?uri=spotify:album:63WdJvk8G9hxJn8u5rswNh' width='400' height='480' frameborder='0' allowtransparency='true'></iframe></center>").hide().fadeIn(2000);
+		$("#playlist").append("<center><h1>Playlist</h1><iframe src='https://open.spotify.com/embed?uri=spotify:album:63WdJvk8G9hxJn8u5rswNh' width='400' height='480' frameborder='0' allowtransparency='true'></iframe></center>").hide().fadeIn(2000);
 
 		skycons(); // inject skycons for each forecast
 

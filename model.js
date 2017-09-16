@@ -1,7 +1,7 @@
 // Here we will construct the data structures that hold our song ID's
 
 var SUNNY = [
-	"1zi7xx7UVEFkmKfv06H8x0".
+	"1zi7xx7UVEFkmKfv06H8x0",
 	"3O8NlPh2LByMU9lSRSHedm",
 	"3aJkV6DUTSCqOwVwaBDG9B",
 	"76gUmNLXGQVOsGhfcshkFP",
