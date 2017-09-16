@@ -69,6 +69,7 @@ function weatherReport(latitude, longitude) {
 	];
 
 	// Call to the DarkSky API to retrieve JSON
+    // We get an error here because now that we're running with a backend server we have to call the Skycon api from our backend (server.js)
 	$.getJSON(api_call, function(forecast) {
 		var date     = new Date(forecast.daily.data[0].time * 1000),
 				day      = days[date.getDay()],
