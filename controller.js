@@ -1,9 +1,9 @@
 'use strict';
 
-exports.weatherReport = function() {
-	return [];
+exports.authenticate = function(req, res) {
+	res.send({});
 };
 
-exports.authenticate = function() {
-	console.log('hello');
+exports.weatherReport = function(req, res) {
+	res.send({});
 };

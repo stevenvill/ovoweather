@@ -9,13 +9,13 @@ var redirect_uri 	  = 'http://localhost:8888/callback';
 let refresh_token 	= 'AQB8U24fbu9SDvmG5Tix7xlBYgNy3jG_TPAK9Kxu69w-s0rwYm0Xn-vuFOBDKa5-QOA53BaHDI2W4xfkFlABG4MEQPMNK7MdtbPhyZL3nCOqiPwrfWGuurZ6sTIca1AjUxE';
 let access_token	  = '';
 
-var app = express();
+var app  = express();
+
+var routes = require('./routes');
+routes(app);
 
 app.use(express.static(__dirname + '/app'))
    .use(cookieParser());
-
-var routes = require('./routes.js');
-routes(app);
 
 // app.get('/', function (req, res) {
   

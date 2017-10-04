@@ -1,3 +1,7 @@
+'use strict';
+
+var baseURL = 'http://localhost:8888';
+
 /*
 $(document).on("click", "#btn", function(){
 	$("h1").fadeOut(1000);
@@ -14,6 +18,10 @@ $(document).on("click", "#btn", function(){
     });
 });
 */
+
+$.get(baseURL + '/authenticate', function( data ) {
+  console.log(data);
+});
 
 function loadSongs() {
     $("h1").fadeOut(1000);
