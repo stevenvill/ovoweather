@@ -19,9 +19,7 @@ $(document).on("click", "#btn", function(){
 });
 */
 
-$.get(baseURL + '/authenticate', function( data ) {
-  console.log(data);
-});
+$.get(baseURL + '/authenticate', function( data ) {});
 
 function loadSongs() {
     $("h1").fadeOut(1000);
@@ -30,7 +28,11 @@ function loadSongs() {
         var location = $('#location_id').val();
         geocoder.geocode( { 'address': location }, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                weatherReport(results[0].geometry.location.lat(), results[0].geometry.location.lng());
+                let latitude = "lat=" + results[0].geometry.location.lat();
+                let longitude = "&long=" + results[0].geometry.location.lng();
+                $.get(baseURL + '/weather?' + latitude + longitude, function( weatherData ) {
+                    displayWeatherAndPlaylist(weatherData);
+                });
             } else {
                 alert("Something went wrong " + status);
             }
@@ -51,7 +53,7 @@ function skycons() {
     for(i = list.length; i--; ) {
         var weatherType = list[i],
             elements = document.getElementsByClassName( weatherType );
-        for (e = elements.length; e--;){
+        for (var e = elements.length; e--;){
             skycons.set( elements[e], weatherType );
         }
     }
@@ -59,43 +61,15 @@ function skycons() {
   skycons.play();
 }
 
-function weatherReport(latitude, longitude) {
-	var apiKey       = '803124776bdc3b6d21073e97812ba316',
-			url          = 'https://api.darksky.net/forecast/', // URL IS DIFFERENT FOR UT SERVER, ADDED (https://crossorigin.me/) TO BEGINNING
-			lati         = latitude,
-			longi        = longitude,
-			api_call     = url + apiKey + "/" + lati + "," + longi;
+function displayWeatherAndPlaylist(weatherData) {
+	// Append divs
+	$("#forecast").append(
+		"<center><h1>Weather</h1><div class='graphic'><canvas class=" + weatherData.skicons + "></canvas></div>" + "<h1>" +
+		weatherData.temp + "&deg; " + weatherData.summary + "</h1></center>"
+	).hide().fadeIn(2000);
 
-	var days = [
-		'Sunday',
-		'Monday',
-		'Tuesday',
-		'Wednesday',
-		'Thursday',
-		'Friday',
-		'Saturday'
-	];
+	$("#playlist").append("<center><h1>Playlist</h1><iframe src='https://open.spotify.com/embed?uri=spotify:album:63WdJvk8G9hxJn8u5rswNh' width='400' height='480' frameborder='0' allowtransparency='true'></iframe></center>").hide().fadeIn(2000);
 
-	// Call to the DarkSky API to retrieve JSON
-    // We get an error here because now that we're running with a backend server we have to call the Skycon api from our backend (server.js)
-	$.getJSON(api_call, function(forecast) {
-		var date     = new Date(forecast.daily.data[0].time * 1000),
-				day      = days[date.getDay()],
-				skicons  = forecast.currently.icon,
-				time     = forecast.currently.time,
-				humidity = forecast.currently.humidity,
-				summary  = forecast.currently.summary,
-				temp     = Math.round(forecast.currently.temperature);
+	skycons(); // inject skycons for each forecast
 
-		// Append divs
-		$("#forecast").append(
-			"<center><h1>Weather</h1><div class='graphic'><canvas class=" + skicons + "></canvas></div>" + "<h1>" +
-			temp + "&deg; " + summary + "</h1></center>"
-		).hide().fadeIn(2000);
-
-		$("#playlist").append("<center><h1>Playlist</h1><iframe src='https://open.spotify.com/embed?uri=spotify:album:63WdJvk8G9hxJn8u5rswNh' width='400' height='480' frameborder='0' allowtransparency='true'></iframe></center>").hide().fadeIn(2000);
-
-		skycons(); // inject skycons for each forecast
-
-	});
 }
