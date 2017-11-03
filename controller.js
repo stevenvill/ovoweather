@@ -1,6 +1,7 @@
 'use strict';
 
 var request 		= require('request'); // "Request" library
+var model 			= require('./model');
 
 var client_id 		= '39ee9f57bb3f41d99983c1784ac0e154';
 var client_secret 	= 'abe7ecd919614b7a8a2057817e8359a2';
@@ -59,6 +60,8 @@ exports.weatherReport = function(req, res) {
 				summary  = json.currently.summary,
 				temp     = Math.round(json.currently.temperature);
 
+		getPlaylist(skicons);
+
 		res.send({
 			'date': date,
 			'day': day,
@@ -70,3 +73,21 @@ exports.weatherReport = function(req, res) {
 		});
 	});
 };
+
+// Helper functions
+
+function getPlaylist(skicon) {
+	var playlist = [];
+
+	if (skicon === "rain" || skicon === "sleet") {
+		playlist = model.RAINY;
+	} else if (skicon === "clear-night" || skicon === "partly-cloudy-night") {
+		playlist = model.NIGHT;
+	} else if (skicon === "clear-day") {
+		playlist = model.SUNNY;
+	} else {
+		playlist = model.COLD;
+	}
+
+	// Construct final curated playlist
+}

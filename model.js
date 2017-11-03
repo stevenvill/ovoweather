@@ -1,9 +1,7 @@
 // Here we will construct the data structures that hold our song ID's
 'use strict';
 
-module.exports = function(app) {
-
-	var SUNNY = [
+module.exports.SUNNY = [
 		"1zi7xx7UVEFkmKfv06H8x0",
 		"3O8NlPh2LByMU9lSRSHedm",
 		"3aJkV6DUTSCqOwVwaBDG9B",
@@ -45,7 +43,7 @@ module.exports = function(app) {
 		"5lFDtgWsjRJu8fPOAyJIAK"
 	];
 
-	var COLD = [
+module.exports.COLD = [
 		"7sBwAWyXfiIgrYQ8BaJESH",
 		"1C7KSXR2GVxknex6I4ANco",
 		"03L2AoiRbWhvt7BDMx1jUB",
@@ -96,7 +94,7 @@ module.exports = function(app) {
 		"2KvHC9z14GSl4YpkNMX384"
 	];
 
-	var NIGHT = [
+module.exports.NIGHT = [
 		"7bPLo5Fv7h15E2fW3g1mVQ",
 		"79MSEdtXuudhGhC5AtG07g",
 		"4XnajLeZt02RnYg4k8kXpm",
@@ -157,7 +155,7 @@ module.exports = function(app) {
 		"0PXp9QxBfSKGGpWUNaws2X"
 	];
 
-	var RAINY = [
+module.exports.RAINY = [
 		"5Z4mLHUiNoc23UktrfthED",
 		"0iQTYM2f0ZO6nAPIWq0olW",
 		"7whQ16ksO0n8HlgkB2YwB5",
@@ -187,4 +185,4 @@ module.exports = function(app) {
 		"05ht6LtilQXryLlGAKH208",
 		"3m1wrL5vw396DIdRqD18mr"
 	];
-}
+
