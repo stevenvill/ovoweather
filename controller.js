@@ -90,4 +90,13 @@ function getPlaylist(skicon) {
 	}
 
 	// Construct final curated playlist
+
+	var uri = [];
+	for (i = 0; i <= 15; i++) {
+		var rand = random(0, playlist.size());
+		temp[i] = "spotify:track:" + playlist[rand];
+	}
+	return uri
 }
+
+
