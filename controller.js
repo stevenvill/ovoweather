@@ -113,14 +113,37 @@ function addTracks(skicon) {
 		playlist = model.COLD;
 	}
 
-	// Have to update algorithm. It's currently possible for duplicates to appear.
+	// Populate an array from 0 to length of playlist
+	var randArr = [];
+	for (var i = 0; i < playlist.length; i++) {
+		randArr.push(i);
+	}
 
+	// Shuffle array
+	randArr = shuffle(randArr);
+
+	// Take first 15 elements of randArray to populate uris and prevent duplication of tracks
 	var uris = [];
-	for (var i = 0; i <= 15; i++) {
-		var rand = Math.floor((Math.random() * playlist.length) + 1);
+	for (var i = 0; i < 15; i++) {
+		var rand = randArr[i];
 		uris[i] = "spotify:track:" + playlist[rand];
 	}
 	console.log(uris);
 }
 
+// Fisher–Yates shuffle
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
 
