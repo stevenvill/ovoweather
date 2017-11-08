@@ -3,6 +3,7 @@
 var request 		= require('request'); // "Request" library
 var model 			= require('./model');
 
+var spotify_id		= "ovoweather";
 var client_id 		= '39ee9f57bb3f41d99983c1784ac0e154';
 var client_secret 	= 'abe7ecd919614b7a8a2057817e8359a2';
 var redirect_uri 	= 'http://localhost:8888/callback';
@@ -60,7 +61,7 @@ exports.weatherReport = function(req, res) {
 				summary  = json.currently.summary,
 				temp     = Math.round(json.currently.temperature);
 
-		getPlaylist(skicons);
+		createSpotifyPlaylist(skicons, res);
 
 		res.send({
 			'date': date,
@@ -76,7 +77,30 @@ exports.weatherReport = function(req, res) {
 
 // Helper functions
 
-function getPlaylist(skicon) {
+function createSpotifyPlaylist(skicon, res) {
+	var requestParams = {
+		"url": "https://api.spotify.com/v1/users/" + spotify_id + "/playlists",
+		"headers": {
+			"Authorization": "Bearer " + access_token,
+			"Content-Type": "application/json"
+		},
+		"json": true,
+		"body": {
+			"name": "My OVO Weather Playlist",
+			"public": false,
+			"collaborative": false,
+			"description": "Enjoy the weather."
+		}
+	};
+
+	request.post(requestParams, function(error, response, body) {
+		console.log(body);
+		addTracks(skicon);
+	});
+
+}
+
+function addTracks(skicon) {
 	var playlist = [];
 
 	if (skicon === "rain" || skicon === "sleet") {
@@ -89,14 +113,14 @@ function getPlaylist(skicon) {
 		playlist = model.COLD;
 	}
 
-	// Construct final curated playlist
+	// Have to update algorithm. It's currently possible for duplicates to appear.
 
-	var uri = [];
-	for (i = 0; i <= 15; i++) {
-		var rand = random(0, playlist.size());
-		temp[i] = "spotify:track:" + playlist[rand];
+	var uris = [];
+	for (var i = 0; i <= 15; i++) {
+		var rand = Math.floor((Math.random() * playlist.length) + 1);
+		uris[i] = "spotify:track:" + playlist[rand];
 	}
-	return uri
+	console.log(uris);
 }
 
 
