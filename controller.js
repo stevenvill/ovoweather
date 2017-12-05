@@ -94,13 +94,12 @@ function createSpotifyPlaylist(skicon, res) {
 	};
 
 	request.post(requestParams, function(error, response, body) {
-		console.log(body);
-		addTracks(skicon);
+		addTracks(skicon, body.id);
 	});
 
 }
 
-function addTracks(skicon) {
+function addTracks(skicon, playlistId) {
 	var playlist = [];
 
 	if (skicon === "rain" || skicon === "sleet") {
@@ -128,7 +127,22 @@ function addTracks(skicon) {
 		var rand = randArr[i];
 		uris[i] = "spotify:track:" + playlist[rand];
 	}
-	console.log(uris);
+
+	var requestParams = {
+		"url": "https://api.spotify.com/v1/users/" + spotify_id + "/playlists/" + playlistId + "/tracks",
+		"headers": {
+			"Authorization": "Bearer " + access_token,
+			"Content-Type": "application/json"
+		},
+		"json": true,
+		"body": {
+			"uris": uris
+		}
+	};
+
+	request.post(requestParams, function(error, response, body) {
+		console.log(body);
+	});
 }
 
 // Fisher–Yates shuffle
