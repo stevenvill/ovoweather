@@ -61,23 +61,24 @@ exports.weatherReport = function(req, res) {
 				summary  = json.currently.summary,
 				temp     = Math.round(json.currently.temperature);
 
-		createSpotifyPlaylist(skicons, res);
-
-		res.send({
-			'date': date,
-			'day': day,
-			'skicons': skicons,
-			'time': time,
-			'humidity': humidity,
-			'summary': summary,
-			'temp': temp
+		createSpotifyPlaylist(skicons, function(playlistURI) {
+			res.send({
+				'date': date,
+				'day': day,
+				'skicons': skicons,
+				'time': time,
+				'humidity': humidity,
+				'summary': summary,
+				'temp': temp,
+				'playlistURI': playlistURI
+			});
 		});
 	});
 };
 
 // Helper functions
 
-function createSpotifyPlaylist(skicon, res) {
+function createSpotifyPlaylist(skicon, callback) {
 	var requestParams = {
 		"url": "https://api.spotify.com/v1/users/" + spotify_id + "/playlists",
 		"headers": {
@@ -94,12 +95,12 @@ function createSpotifyPlaylist(skicon, res) {
 	};
 
 	request.post(requestParams, function(error, response, body) {
-		addTracks(skicon, body.id);
+		addTracks(skicon, body.id, callback);
 	});
 
 }
 
-function addTracks(skicon, playlistId) {
+function addTracks(skicon, playlistId, callback) {
 	var playlist = [];
 
 	if (skicon === "rain" || skicon === "sleet") {
@@ -142,6 +143,7 @@ function addTracks(skicon, playlistId) {
 
 	request.post(requestParams, function(error, response, body) {
 		console.log(body);
+		callback(playlistId);
 	});
 }
 
