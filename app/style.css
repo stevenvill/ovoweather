@@ -23,9 +23,8 @@ body {
 
 .footer {
   /* Set the fixed height of the footer here */
-  height: 100px;
-  line-height: 100px; /* Vertically center the text there */
-
+  height: 50px;
+  line-height: 50px; /* Vertically center the text there */
 }
 
 .row {

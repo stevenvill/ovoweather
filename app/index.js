@@ -2,23 +2,6 @@
 
 var baseURL = 'http://localhost:8888';
 
-/*
-$(document).on("click", "#btn", function(){
-	$("h1").fadeOut(1000);
-	$("form").fadeOut(1000, function (){
-    	var geocoder =  new google.maps.Geocoder();
-    	var location = $('#location_id').val();
-    	geocoder.geocode( { 'address': location }, function(results, status) {
-    	if (status == google.maps.GeocoderStatus.OK) {
-    	    	weatherReport(results[0].geometry.location.lat(), results[0].geometry.location.lng());
-    	    } else {
-    	        alert("Something went wrong " + status);
-    	    }
-    	});
-    });
-});
-*/
-
 $.get(baseURL + '/authenticate', function( data ) {});
 
 function loadSongs() {
@@ -34,7 +17,7 @@ function loadSongs() {
                     displayWeatherAndPlaylist(weatherData);
                 });
             } else {
-                alert("Something went wrong " + status);
+                alert("Something went wrong. Try again.");
             }
         });
     });
