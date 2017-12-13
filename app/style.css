@@ -40,6 +40,10 @@ h1 {
   margin-top: 20px;
 }
 
+.about {
+  text-transform: lowercase;
+}
+
 #location_id {
   font-size: 24px;
   font-weight: 700;
@@ -71,9 +75,33 @@ h1 {
   min-width: 50%;
   min-height: 50%;
 }
+
+.about-img {
+  width: 200px;
+  height: 200px;
+}
+
+#icons {
+  padding-top: 10px;
+  padding-bottom: 35px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
   
 .container {
-  padding-top:20px;
+  padding-top: 20px;
+}
+
+.plain-link {
+  color: white;
+}
+
+.plain-link:hover {
+  color: #a49262;
+  text-decoration: none;
 }
 
 form {
@@ -110,4 +138,9 @@ input:focus {
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .open>.dropdown-toggle.btn-primary {
   color: #fff;
   background-color: #4e462f !important;
+}
+
+.disclaimer {
+  font-size: 11px;
+  margin: 0;
 }

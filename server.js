@@ -1,7 +1,7 @@
 var express 		  = require('express'); // Express web server framework
 var querystring 	= require('querystring');
 var cookieParser 	= require('cookie-parser');
-var compression = require('compression');
+var compression   = require('compression');
 
 var app  = express();
 
