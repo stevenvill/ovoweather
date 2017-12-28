@@ -4,6 +4,7 @@ var cookieParser 	= require('cookie-parser');
 var compression   = require('compression');
 
 var app  = express();
+var port = process.env.PORT || 80;
 
 var routes = require('./routes');
 routes(app);
@@ -13,5 +14,5 @@ app.use(express.static(__dirname + '/app'))
 
 app.use(compression());
 
-console.log('Listening on 8888');
-app.listen(8888);
+console.log('Listening on port ' + port);
+app.listen(port);
