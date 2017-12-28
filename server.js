@@ -4,7 +4,7 @@ var cookieParser 	= require('cookie-parser');
 var compression   = require('compression');
 
 var app  = express();
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 3000;
 
 var routes = require('./routes');
 routes(app);
