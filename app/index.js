@@ -13,7 +13,7 @@ function loadSongs() {
             if (status == google.maps.GeocoderStatus.OK) {
                 let latitude = "lat=" + results[0].geometry.location.lat();
                 let longitude = "&long=" + results[0].geometry.location.lng();
-                $.get(baseURL + '/weather?' + latitude + longitude, function( weatherData ) {
+                $.get(baseURL + '/rweather?' + latitude + longitude, function( weatherData ) {
                     displayWeatherAndPlaylist(weatherData);
                 });
             } else {
@@ -52,7 +52,7 @@ function displayWeatherAndPlaylist(weatherData) {
 	).hide().fadeIn(2000);
 
     var src = "https://open.spotify.com/embed?uri=spotify:user:ovoweather:playlist:" + weatherData.playlistURI;
-	$("#playlist").append("<center><h1>Playlist</h1><iframe src='" + src + "' width='400' height='480' frameborder='0' allowtransparency='true'></iframe></center>").hide().fadeIn(2000);
+	$("#playlist").append("<center><h1>Playlist</h1><iframe scrolling='no' src='" + src + "' width='400' height='480' frameborder='0' allowtransparency='true'></iframe></center>").hide().fadeIn(2000);
 
 	skycons(); // inject skycons for each forecast
 
