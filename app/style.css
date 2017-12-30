@@ -40,6 +40,12 @@ h1 {
   margin-top: 20px;
 }
 
+h4 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .about {
   text-transform: lowercase;
 }
@@ -49,6 +55,7 @@ h1 {
   font-weight: 700;
   text-transform: uppercase;
   padding-left: 0px;
+  padding-right: 0px;
   padding-bottom: 0px;
   color: #a49262;
   text-align: center;
@@ -129,15 +136,26 @@ input:focus {
   outline: none !important;
 }
 
+
 .btn-primary {
   background: #776a47;
   text-transform: uppercase;
   font-weight: 700;
   border: 0;
+  width: 50%;
 }
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .open>.dropdown-toggle.btn-primary {
   color: #fff;
   background-color: #4e462f !important;
+}
+
+@media only screen and (min-width:600px) {
+  .btn-primary {
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+  }
 }
 
 .disclaimer {
