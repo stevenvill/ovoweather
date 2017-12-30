@@ -62,6 +62,7 @@ exports.weatherReport = function(req, res) {
 				temp     = Math.round(json.currently.temperature);
 
 		createSpotifyPlaylist(skicons, function(playlistURI) {
+			res.header('Access-Control-Allow-Origin', 'http://www.ovoweather.com');
 			res.send({
 				'date': date,
 				'day': day,
