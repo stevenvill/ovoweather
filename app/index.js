@@ -13,7 +13,7 @@ function loadSongs() {
             if (status == google.maps.GeocoderStatus.OK) {
                 let latitude = "lat=" + results[0].geometry.location.lat();
                 let longitude = "&long=" + results[0].geometry.location.lng();
-                $.get(baseURL + '/rweather?' + latitude + longitude, function( weatherData ) {
+                $.get(baseURL + '/weather?' + latitude + longitude, function( weatherData ) {
                     displayWeatherAndPlaylist(weatherData);
                 });
             } else {
