@@ -7,7 +7,14 @@
 
 @media only screen and (max-width:600px) {
   #playlist {
-    width: 300px;
+    position: relative;
+  }
+  iframe {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
   }
 }
 
@@ -148,7 +155,7 @@ form {
 
 @media only screen and (max-width:600px) {
   form {
-    padding-top: 70px;
+    padding-top: 65px;
   }
 }
 
