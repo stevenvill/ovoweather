@@ -7,7 +7,7 @@
 
 @media only screen and (max-width:600px) {
   #playlist {
-    width: 350px;
+    width: 300px;
   }
 }
 
@@ -31,7 +31,7 @@ body {
 
 .wrapper {
   min-height: 100%;
-  margin-bottom: -80px;
+  margin-bottom: -70px;
 }
 
 .footer {
@@ -148,7 +148,7 @@ form {
 
 @media only screen and (max-width:600px) {
   form {
-    padding-top: 80px;
+    padding-top: 70px;
   }
 }
 
