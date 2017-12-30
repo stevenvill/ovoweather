@@ -16,12 +16,10 @@ body {
   height: 100%;
 }
 
-.wrapper {
-  min-height: 100%;
-  margin-bottom: -100px;
-}
-
 .footer {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
   /* Set the fixed height of the footer here */
   height: 50px;
   line-height: 50px; /* Vertically center the text there */
@@ -142,7 +140,7 @@ input:focus {
   text-transform: uppercase;
   font-weight: 700;
   border: 0;
-  width: 50%;
+  width:50%;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .open>.dropdown-toggle.btn-primary {
