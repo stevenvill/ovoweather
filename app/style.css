@@ -11,10 +11,8 @@
     overflow-y: scroll;
   }
   iframe {
-    height: 1px;
-    width: 1px;
-    min-height: 100%;
-    min-height: 100%;
+    width: 400px;
+    height: 480px;
   }
 }
 
