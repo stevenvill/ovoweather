@@ -37,6 +37,12 @@ h1 {
   margin-top: 20px;
 }
 
+@media only screen and (min-width:600px) {
+  h1 {
+    font size: 12px;
+  }
+}
+
 h4 {
   font-size: 20px;
   font-weight: 700;
