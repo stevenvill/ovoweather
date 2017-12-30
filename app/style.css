@@ -140,6 +140,12 @@ form {
   padding-top: 280px;
 }
 
+@media only screen and (max-width:600px) {
+  form {
+    padding-top: 140px;
+  }
+}
+
 .control-label {
   text-transform: uppercase !important;
   font-size: 34px;
