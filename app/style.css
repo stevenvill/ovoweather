@@ -3,13 +3,12 @@
     width: 80px;
     height: 80px;
   }
-}
 
-@media only screen and (max-width:600px) {
   #playlist {
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
   }
+
   iframe {
     top: 0;
     bottom: 0;
@@ -17,6 +16,26 @@
     right: 0;
     width: 300px;
     height: 380px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  #location_id {
+    font-size: 20px;
+  }
+
+  form {
+    padding-top: 65px;
+  }
+
+  #forecast canvas {
+    width: 200px;
   }
 }
 
@@ -58,22 +77,10 @@ h1 {
   margin-top: 20px;
 }
 
-@media only screen and (max-width:600px) {
-  h1 {
-    font-size: 20px;
-  }
-}
-
 h4 {
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-@media only screen and (max-width:600px) {
-  h4 {
-    font-size: 16px;
-  }
 }
 
 .about {
@@ -89,12 +96,6 @@ h4 {
   padding-bottom: 0px;
   color: #a49262;
   text-align: center;
-}
-
-@media only screen and (max-width:600px) {
-  #location_id {
-    font-size: 20px;
-  }
 }
 
 #bg {
@@ -149,12 +150,6 @@ h4 {
 
 form {
   padding-top: 280px;
-}
-
-@media only screen and (max-width:600px) {
-  form {
-    padding-top: 65px;
-  }
 }
 
 .control-label {

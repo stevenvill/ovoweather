@@ -4,6 +4,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel = "stylesheet" type = "text/css" href = "./style.css" media = "all" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111692713-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111692713-1');
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1fiYKBNqKmlPlvZ1AbTbRAfMKqO34apw"></script>
   <script type="text/javascript" src="index.js"></script>
@@ -11,6 +20,9 @@
   <title> OVO WEATHER </title>
 </head>
 <body>
+  <div id="bg">
+    <img src="./bg.gif"/>
+  </div>
   <div class="container wrapper">
     <center><a href="index.html"><img id="logo" width="100" height="100" src="./logo.png"></a></center>
     <center><h1>Curate an OVO playlist based on the current weather of your desired location</h1></center>
@@ -31,9 +43,6 @@
         <div class="col-md-6" id="playlist">
         </div>
     </div>
-  </div>
-  <div id="bg">
-    <img class="img-responsive" id="myImg" src="./bg.gif"/>
   </div>
 
   <footer class="footer">
