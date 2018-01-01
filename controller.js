@@ -143,7 +143,6 @@ function addTracks(skicon, playlistId, callback) {
 	};
 
 	request.post(requestParams, function(error, response, body) {
-		console.log(body);
 		callback(playlistId);
 	});
 }

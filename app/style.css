@@ -3,13 +3,12 @@
     width: 80px;
     height: 80px;
   }
-}
 
-@media only screen and (max-width:600px) {
   #playlist {
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
   }
+
   iframe {
     top: 0;
     bottom: 0;
