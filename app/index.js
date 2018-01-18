@@ -11,8 +11,8 @@ function loadSongs() {
         var location = $('#location_id').val();
         geocoder.geocode( { 'address': location }, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                let latitude = "lat=" + results[0].geometry.location.lat();
-                let longitude = "&long=" + results[0].geometry.location.lng();
+                var latitude = "lat=" + results[0].geometry.location.lat();
+                var longitude = "&long=" + results[0].geometry.location.lng();
                 $.get(baseURL + '/weather?' + latitude + longitude, function( weatherData ) {
                     displayWeatherAndPlaylist(weatherData);
                 });
