@@ -108,8 +108,12 @@ function addTracks(skicon, playlistId, callback) {
 		playlist = model.RAINY;
 	} else if (skicon === "clear-night" || skicon === "partly-cloudy-night") {
 		playlist = model.NIGHT;
-	} else if (skicon === "clear-day") {
-		playlist = model.SUNNY;
+	} else if (skicon === "clear-day" || skicon == "partly-cloudy-day") {
+		if (temp > 60) {
+			playlist = model.SUNNY_WARM;
+		} else {
+			playlist = model.SUNNY_COLD;
+		}
 	} else {
 		playlist = model.COLD;
 	}

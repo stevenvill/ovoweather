@@ -1,7 +1,7 @@
 // Here we will construct the data structures that hold our song ID's
 'use strict';
 
-module.exports.SUNNY = [
+module.exports.SUNNY_WARM = [
 		"1zi7xx7UVEFkmKfv06H8x0",
 		"3O8NlPh2LByMU9lSRSHedm",
 		"3aJkV6DUTSCqOwVwaBDG9B",
@@ -50,6 +50,48 @@ module.exports.SUNNY = [
 		"4Z22Uz5JhtWbkmzojNcdPr",
 		"61mnlyQlnPuq1GEX0LxIWh",
 		"6exZ2z04zL5HxYnPhWgeQO"
+	];
+
+module.exports.SUNNY_WARM = [
+		"3SyuoBmddlieyOmlcD0ZdT",
+		"52ztI2AthLbmFHyGE3CzSl",
+		"78yeKzZVT9ARq9icCvEF3A",
+		"6z832PPPyMHmahjAihz9lU",
+		"1CJmTfrlU1d6FtAYNT36wD",
+		"5GXXgD0V3Hfz0Q3SzxWGGn",
+		"3fyMH1t6UPeR5croea9PrR",
+		"1sz5a04yRJ0oQocn2LrOpv",
+		"3cBUv0RIoEyAm2b7qimEY6",
+		"6Na5uKk5SsqZimk0hAWo8y",
+		"3XzR2MH55r1E4MsbUnbSYH",
+		"5CDy1I6rSt6vXdqIb87A6f",
+		"3cjF2OFRmip8spwZYQRKxP",
+		"6RD9GItAGZ3gbUbx14okHF",
+		"1OHoBC4icbuNhpSxP400sv",
+		"6AIte2Iej1QKlaofpjCzW1",
+		"0UE0RhnRaEYsiYgXpyLoZc",
+		"72e5ilFtd3OoPFGzmQwja1",
+		"27GmP9AWRs744SzKcpJsTZ",
+		"2durxb17bXcmQJHSt8JAdO",
+		"12d5QFwzh60IIHlsSnAvps",
+		"7kfTqGMzIHFWeBeOJALzRf",
+		"6V2D8Lls36APk0THDjBDfE",
+		"04a1HkNH7LFsG5mEiLN7vl",
+		"4jtyUzZm9WLc2AdaJ1dso7",
+		"6t2eIONH4Sax3R21QWiKNp",
+		"5mZJwWdxAOR4xUvSGZvvMU",
+		"0GR7iJLhj80KD5LkA14ZRn",
+		"63p3Slj0shAFP0Q7dQetj5",
+		"79XrkTOfV1AqySNjVlygpW",
+		"49ySwzAyvxcNXOkOP6ZB1L",
+		"6HfOzLLjsaXsehIFEsrxTk",
+		"6oF3Es1YzzmLKjGBfThUvD",
+		"343YBumqHu19cGoGARUTsd",
+		"4YJmZfvlheSziXem8HBWrj",
+		"6RD9GItAGZ3gbUbx14okHF",
+		"0XGLsSU6wtfnKXiMNvQr61",
+		"5lFDtgWsjRJu8fPOAyJIAK",
+		"2XW4DbS6NddZxRPm5rMCeY"
 	];
 
 module.exports.COLD = [
