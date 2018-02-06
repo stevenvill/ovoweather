@@ -40,7 +40,16 @@ module.exports.SUNNY = [
 		"4YJmZfvlheSziXem8HBWrj",
 		"0qfq195ZlBgRNeeABoQCwp",
 		"0XGLsSU6wtfnKXiMNvQr61",
-		"5lFDtgWsjRJu8fPOAyJIAK"
+		"5lFDtgWsjRJu8fPOAyJIAK",
+		"5l5wRXA7asTNjh3V0oNGPs",
+		"2XW4DbS6NddZxRPm5rMCeY",
+		"5RbHmTxWjHgn2yR1MpC3VW",
+		"4SXZRbnd5oBMRjvwLr0FkZ",
+		"64TkpV7m7f09JY7K436pju",
+		"0SujigeT7cxuxBfhN3eOcp",
+		"4Z22Uz5JhtWbkmzojNcdPr",
+		"61mnlyQlnPuq1GEX0LxIWh",
+		"6exZ2z04zL5HxYnPhWgeQO"
 	];
 
 module.exports.COLD = [
@@ -91,7 +100,15 @@ module.exports.COLD = [
 		"1JUvB8LRKYoik4BB1bEJWK",
 		"1bzM1cd6oqFozdr4wK6HdR",
 		"4pc01CAhGKx15PY23uPjHp",
-		"2KvHC9z14GSl4YpkNMX384"
+		"2KvHC9z14GSl4YpkNMX384",
+		"3V35bKSSm4usoSPjdaRGMx",
+		"1fCz8XdLhSqUZoIpZjpg10",
+		"5RbHmTxWjHgn2yR1MpC3VW",
+		"0i1YwWmVoNlAckK2ej9K4I",
+		"1zZA8kT0U3pADcJ3GIhdEQ",
+		"07Qonra5xGHyjndj0gtOHy",
+		"2yTTfOaptQVJiocgjoQFfi",
+		"0TCRMLcilbYgj1Gb016JbJ"
 	];
 
 module.exports.NIGHT = [
@@ -152,7 +169,34 @@ module.exports.NIGHT = [
 		"2ApXqnIWRbN3EzmFpQNcTr",
 		"608a1wIsSd5KzMEqm1O7w3",
 		"0nq6sfr8z1R5KJ4XUk396e",
-		"0PXp9QxBfSKGGpWUNaws2X"
+		"0PXp9QxBfSKGGpWUNaws2X",
+		"1fCz8XdLhSqUZoIpZjpg10",
+		"4SlpsXaeTabz2uWGIeJlGK",
+		"6Y5qRSDPP4nfU9ZiFuANdt",
+		"3TOfqwEx5xzcOchDGEufD9",
+		"5DXHRoMij9Dm1Hs5lbKYq8",
+		"3V35bKSSm4usoSPjdaRGMx",
+		"43R6ZE3pEQfP5H0fnnpxAZ",
+		"4ZTETnwHx0TlJbSJORennq",
+		"74bV6EDlAPx3IQWZjpRw82",
+		"5RbHmTxWjHgn2yR1MpC3VW",
+		"5YxaccATvDTIOpue7vu6Tn",
+		"0i1YwWmVoNlAckK2ej9K4I",
+		"6fzazr3yVGfhGBnabJldPg",
+		"5sOW5hiIFFjtS51KMlWwt1",
+		"0WBGu4SCQxUSFtYRomXni9",
+		"4CluZnxfygZoo4OwFm0xUd",
+		"07Qonra5xGHyjndj0gtOHy",
+		"4wXvqEHxo3HwLs6mcqU4bb",
+		"2bxG0N7YsdkIBfuLsE0J8i",
+		"21bl9jnt8gKltnNYpOPbhw",
+		"4SzyebNrhvPJ8y4r1D1PXD",
+		"3n3yyaEP6DRbhtN9sWAOeU",
+		"4HGo2tXunoK8khQZSoHzqd",
+		"5wUUWVRvrciJqFitZF8R0P",
+		"3KieL5uglGWT9FxC9L6hNc",
+		"2cLOhJv1hQQRLBf3eVJOHV",
+		"5goGDc74vVREyN8al8CkPh"
 	];
 
 module.exports.RAINY = [
@@ -183,6 +227,11 @@ module.exports.RAINY = [
 		"47wRhI5SQeEq6YXawou58W",
 		"1JUvB8LRKYoik4BB1bEJWK",
 		"05ht6LtilQXryLlGAKH208",
-		"3m1wrL5vw396DIdRqD18mr"
+		"3m1wrL5vw396DIdRqD18mr",
+		"4ZTETnwHx0TlJbSJORennq",
+		"40iunJO257hgsHnM6a8n1k",
+		"65APaGGVoN1efvB7Sd3mmy",
+		"4CluZnxfygZoo4OwFm0xUd",
+		"2bxG0N7YsdkIBfuLsE0J8i"
 	];
 
