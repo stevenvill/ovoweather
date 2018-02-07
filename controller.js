@@ -53,7 +53,7 @@ exports.weatherReport = function(req, res) {
 	request.get(api_call, function(error, response, body) {
 		let json = JSON.parse(body);
 
-		var date     = new Date(json.daily.data[0].time * 1000),
+		var 	date     = new Date(json.daily.data[0].time * 1000),
 				day      = days[date.getDay()],
 				skicons  = json.currently.icon,
 				time     = json.currently.time,
@@ -61,7 +61,7 @@ exports.weatherReport = function(req, res) {
 				summary  = json.currently.summary,
 				temp     = Math.round(json.currently.temperature);
 
-		createSpotifyPlaylist(skicons, function(playlistURI) {
+		createSpotifyPlaylist(skicons, temp, function(playlistURI) {
 			res.header('Access-Control-Allow-Origin', 'http://ovoweather.com');
 			res.send({
 				'date': date,
@@ -79,7 +79,7 @@ exports.weatherReport = function(req, res) {
 
 // Helper functions
 
-function createSpotifyPlaylist(skicon, callback) {
+function createSpotifyPlaylist(skicon, temp, callback) {
 	var requestParams = {
 		"url": "https://api.spotify.com/v1/users/" + spotify_id + "/playlists",
 		"headers": {
@@ -96,12 +96,12 @@ function createSpotifyPlaylist(skicon, callback) {
 	};
 
 	request.post(requestParams, function(error, response, body) {
-		addTracks(skicon, body.id, callback);
+		addTracks(skicon, temp, body.id, callback);
 	});
 
 }
 
-function addTracks(skicon, playlistId, callback) {
+function addTracks(skicon, temp, playlistId, callback) {
 	var playlist = [];
 
 	if (skicon === "rain" || skicon === "sleet") {
@@ -109,7 +109,7 @@ function addTracks(skicon, playlistId, callback) {
 	} else if (skicon === "clear-night" || skicon === "partly-cloudy-night") {
 		playlist = model.NIGHT;
 	} else if (skicon === "clear-day" || skicon == "partly-cloudy-day") {
-		if (temp > 60) {
+		if (temp > 59) {
 			playlist = model.SUNNY_WARM;
 		} else {
 			playlist = model.SUNNY_COLD;
