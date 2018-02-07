@@ -52,7 +52,7 @@ module.exports.SUNNY_WARM = [
 		"6exZ2z04zL5HxYnPhWgeQO"
 	];
 
-module.exports.SUNNY_WARM = [
+module.exports.SUNNY_COLD = [
 		"3SyuoBmddlieyOmlcD0ZdT",
 		"52ztI2AthLbmFHyGE3CzSl",
 		"78yeKzZVT9ARq9icCvEF3A",
