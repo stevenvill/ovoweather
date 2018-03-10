@@ -5,6 +5,11 @@ var baseURL = 'http://www.ovoweather.com';
 $.get(baseURL + '/authenticate', function( data ) {});
 
 function loadSongs() {
+    if (!$('#location_id').val()) {
+        alert("Enter a city fam.");
+        return false;
+    }
+
     $("h1").fadeOut(1000);
     $("form").fadeOut(1000, function () {
         var geocoder =  new google.maps.Geocoder();

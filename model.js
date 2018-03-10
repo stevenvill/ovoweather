@@ -53,7 +53,7 @@ module.exports.SUNNY_WARM = [
 	];
 
 module.exports.SUNNY_COLD = [
-		"3SyuoBmddlieyOmlcD0ZdT",
+		"4d2iGFWFAMt6AE7SQ7Psxh",
 		"52ztI2AthLbmFHyGE3CzSl",
 		"78yeKzZVT9ARq9icCvEF3A",
 		"6z832PPPyMHmahjAihz9lU",
