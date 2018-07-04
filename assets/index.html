@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="apple-touch-icon" href="img/logo.png">
   <meta name="description" content="Curate an OVO playlist based on the current weather of your desired location.">
   <meta name="keywords" content="ovoweather, ovo weather, drake weather, moody weather, weather playlist, drake weather playlist, ovo playlist">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="img/logo.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href ="css/style.css" media="all" />
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -26,21 +26,17 @@
   <div id="bg">
     <img class="img-responsive" src="img/bg.gif"/>
   </div>
-
   <div class="container wrapper">
     <center><a href="index.html"><img id="logo" width="100" height="100" src="img/logo.png"></a></center>
     <center><h1>Curate an OVO playlist based on the current weather of your desired location</h1></center>
-
     <center>
-    <form class="form-inline" onsubmit="return loadSongs()">
-      <div class="form-group">
-        <!-- <label for="location_id" class="control-label">Location</label> -->
-        <input type="text" class="form-control input-lg" id="location_id" placeholder="enter city" autocomplete="off" autofocus>
-        <button type="submit" id="btn" class="btn btn-primary btn-lg">Submit</button>
-      </div>
-    </form>
+      <form class="form-inline" onsubmit="return loadSongs()">
+        <div class="form-group">
+          <input type="text" class="form-control input-lg" id="location_id" placeholder="enter city" autocomplete="off" autofocus>
+          <button type="submit" id="btn" class="btn btn-primary btn-lg">Submit</button>
+        </div>
+      </form>
     </center>
-  
     <div class="row">
         <div class="col-md-6" id="forecast">
         </div>
@@ -54,6 +50,5 @@
       <h4><center><a href="contact.html" class="plain-link"> about </a></center></h4>
     </div>
   </footer>
-
 </body>
 </html>
