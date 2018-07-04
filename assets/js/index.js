@@ -1,6 +1,6 @@
 'use strict';
 
-var baseURL = 'http://www.ovoweather.com';
+var baseURL = 'http://localhost:3000';
 
 $.get(baseURL + '/authenticate', function( data ) {});
 

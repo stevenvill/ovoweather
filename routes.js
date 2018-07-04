@@ -8,5 +8,4 @@ module.exports = function(app) {
 
   app.route('/weather')
     .get(controller.weatherReport);
-
 };
