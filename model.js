@@ -49,7 +49,12 @@ module.exports.SUNNY_WARM = [
 		"0SujigeT7cxuxBfhN3eOcp",
 		"4Z22Uz5JhtWbkmzojNcdPr",
 		"61mnlyQlnPuq1GEX0LxIWh",
-		"6exZ2z04zL5HxYnPhWgeQO"
+		"6exZ2z04zL5HxYnPhWgeQO",
+		"3CA9pLiwRIGtUBiMjbZmRw",
+		"6vN77lE9LK6HP2DewaN6HZ",
+		"2G7V7zsVDxg1yRsu7Ew9RJ",
+		"4n1bdaKwynQndm47x5HqWX",
+		"4qKcDkK6siZ7Jp1Jb4m0aL"
 	];
 
 module.exports.SUNNY_COLD = [
@@ -91,7 +96,17 @@ module.exports.SUNNY_COLD = [
 		"6RD9GItAGZ3gbUbx14okHF",
 		"0XGLsSU6wtfnKXiMNvQr61",
 		"5lFDtgWsjRJu8fPOAyJIAK",
-		"2XW4DbS6NddZxRPm5rMCeY"
+		"2XW4DbS6NddZxRPm5rMCeY",
+		"3CA9pLiwRIGtUBiMjbZmRw",
+		"6vN77lE9LK6HP2DewaN6HZ",
+		"2G7V7zsVDxg1yRsu7Ew9RJ",
+		"3qN5qMTKyEEmiTZD38BNTT",
+		"0zqy3ss4CwD6u4QPksS0nI",
+		"7rC5Pl8rQSX4myONQHYPBK",
+		"4SUwJA3eUVNHExxMPEUhQe",
+		"4n1bdaKwynQndm47x5HqWX",
+		"0TlLq3lA83rQOYtrqBqSct",
+		"4qKcDkK6siZ7Jp1Jb4m0aL"
 	];
 
 module.exports.COLD = [
@@ -150,7 +165,19 @@ module.exports.COLD = [
 		"1zZA8kT0U3pADcJ3GIhdEQ",
 		"07Qonra5xGHyjndj0gtOHy",
 		"2yTTfOaptQVJiocgjoQFfi",
-		"0TCRMLcilbYgj1Gb016JbJ"
+		"0TCRMLcilbYgj1Gb016JbJ",
+		"5EB4tCj94QDpo7cEpvtHVx",
+		"6G8kHiVZ1jW7vHMPVRNZU0",
+		"4Yp3EZ8Th8NUkNyTOBEqS3",
+		"2yg9UN4eo5eMVJ7OB4RWj3",
+		"3szf2z1Cy1QMrtHrbn8rz9",
+		"3qN5qMTKyEEmiTZD38BNTT",
+		"7rC5Pl8rQSX4myONQHYPBK",
+		"1dUHF4RyMmMTveJ0Rby6Xm",
+		"4ksuI04WMvUnJbHQjgs3L5",
+		"41a7dZcq30Ss5kPMayWRV0",
+		"0TlLq3lA83rQOYtrqBqSct",
+		"4qKcDkK6siZ7Jp1Jb4m0aL"
 	];
 
 module.exports.NIGHT = [
@@ -238,7 +265,29 @@ module.exports.NIGHT = [
 		"5wUUWVRvrciJqFitZF8R0P",
 		"3KieL5uglGWT9FxC9L6hNc",
 		"2cLOhJv1hQQRLBf3eVJOHV",
-		"5goGDc74vVREyN8al8CkPh"
+		"5goGDc74vVREyN8al8CkPh",
+		"5u03lOJPE3Xxen9jqRChLP",
+		"4Yp3EZ8Th8NUkNyTOBEqS3",
+		"2yg9UN4eo5eMVJ7OB4RWj3",
+		"3szf2z1Cy1QMrtHrbn8rz9",
+		"5Psnhdkyanjpgc2P8A5TSM",
+		"7rC5Pl8rQSX4myONQHYPBK",
+		"1dUHF4RyMmMTveJ0Rby6Xm",
+		"6cblRiEGDRNZgowcm951R3",
+		"1Tnw0ItH1Macok8gblnPPd",
+		"11L064movtyopGdLiX4sVg",
+		"4HG1YiGBseVKzjyKcmAJen",
+		"2WP8G2pdddDmnh1xbfKBOI",
+		"41a7dZcq30Ss5kPMayWRV0",
+		"6G8kHiVZ1jW7vHMPVRNZU0",
+		"3mvYQKm8h6M5K5h0nVPY9S",
+		"44Du2IM1bGY7dicmLfXbUs",
+		"09lmraDvzBT3pUQ2rUtJzK",
+		"0TlLq3lA83rQOYtrqBqSct",
+		"4qKcDkK6siZ7Jp1Jb4m0aL",
+		"7ulQ51iAbfUjbEifA3AybH",
+		"5DXHRoMij9Dm1Hs5lbKYq8",
+		"6a6HeUV53Ie7K0gcbpE8c6"
 	];
 
 module.exports.RAINY = [
@@ -274,6 +323,10 @@ module.exports.RAINY = [
 		"40iunJO257hgsHnM6a8n1k",
 		"65APaGGVoN1efvB7Sd3mmy",
 		"4CluZnxfygZoo4OwFm0xUd",
-		"2bxG0N7YsdkIBfuLsE0J8i"
+		"2bxG0N7YsdkIBfuLsE0J8i",
+		"11L064movtyopGdLiX4sVg",
+		"4HG1YiGBseVKzjyKcmAJen",
+		"4c2xt1trwYZpMqPWY35Xi9",
+		"2WP8G2pdddDmnh1xbfKBOI"
 	];
 
