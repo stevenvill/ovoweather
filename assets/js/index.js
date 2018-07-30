@@ -1,8 +1,6 @@
 'use strict';
 
-var baseURL = 'http://localhost:3000';
-
-$.get(baseURL + '/authenticate', function( data ) {});
+$.get('/authenticate', function( data ) {});
 
 function loadSongs() {
     if (!$('#location_id').val()) {
@@ -18,7 +16,7 @@ function loadSongs() {
             if (status == google.maps.GeocoderStatus.OK) {
                 var latitude = "lat=" + results[0].geometry.location.lat();
                 var longitude = "&long=" + results[0].geometry.location.lng();
-                $.get(baseURL + '/weather?' + latitude + longitude, function( weatherData ) {
+                $.get('/weather?' + latitude + longitude, function( weatherData ) {
                     displayWeatherAndPlaylist(weatherData);
                 });
             } else {

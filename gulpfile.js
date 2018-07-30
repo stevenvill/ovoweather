@@ -5,6 +5,7 @@ var concat      = require('gulp-concat');
 var uglify      = require('gulp-uglify');
 var cssnano     = require('gulp-cssnano');
 var imagemin    = require('gulp-imagemin');
+var htmlmin     = require('gulp-htmlmin');
 var cache       = require('gulp-cache');
 var del         = require('del');
 
@@ -13,7 +14,7 @@ var del         = require('del');
 gulp.task('browserSync', function() {
  	browserSync({
 	    proxy: "localhost:3000",
-	    port: 5000,
+	    port: 3001,
 	    notify: true
  	});
 })
@@ -45,6 +46,15 @@ gulp.task('images', function() {
 		.pipe(gulp.dest('dist/img'))
 });
 
+gulp.task('pages', function() {
+	return gulp.src(['assets/*.html'])
+		.pipe(htmlmin({
+			collapseWhitespace: true,
+			removeComments: true
+		}))
+		.pipe(gulp.dest('dist'));
+});
+
 gulp.task('clean:dist', function() {
 	return del.sync('dist');
 })
@@ -62,7 +72,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
 	runSequence(
 		'clean:dist',
-		['pack-js', 'pack-css', 'images'],
+		['pack-js', 'pack-css', 'images', 'pages'],
 		callback
 	)
 })
