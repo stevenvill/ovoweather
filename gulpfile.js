@@ -6,6 +6,7 @@ var uglify      = require('gulp-uglify');
 var cssnano     = require('gulp-cssnano');
 var imagemin    = require('gulp-imagemin');
 var htmlmin     = require('gulp-htmlmin');
+var sourcemaps  = require('gulp-sourcemaps');
 var cache       = require('gulp-cache');
 var del         = require('del');
 
@@ -29,14 +30,18 @@ gulp.task('watch', function() {
 
 gulp.task('pack-js', function() {	
 	return gulp.src('assets/js/*.js')
+		.pipe(sourcemaps.init())
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('pack-css', function() {	
 	return gulp.src('assets/css/*.css')
+		.pipe(sourcemaps.init())
 		.pipe(cssnano())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('dist/css'));
 });
 
@@ -47,7 +52,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('pages', function() {
-	return gulp.src(['assets/*.html'])
+	return gulp.src(['assets/**/*.html'])
 		.pipe(htmlmin({
 			collapseWhitespace: true,
 			removeComments: true
@@ -63,8 +68,10 @@ gulp.task('clean:dist', function() {
 
 gulp.task('default', function(callback) {
 	runSequence(
+		'clean:dist',
 		'browserSync',
 		'watch',
+		['pack-js', 'pack-css', 'images', 'pages'],
 		callback
  	)
 })

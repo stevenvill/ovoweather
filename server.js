@@ -5,17 +5,11 @@ var compression  = require('compression');
 
 var app  = express();
 var port = process.env.PORT || 3000;
-var environment = process.env.NODE_ENV;
 
 var routes = require('./routes');
 routes(app);
 
-var assets = "/assets";
-if (environment === "production") {
-	assets = "/dist";
-}
-
-app.use(express.static(__dirname + assets));
+app.use(express.static(__dirname + "/dist"));
 app.use(cookieParser());
 app.use(compression());
 

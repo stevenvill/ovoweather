@@ -20,6 +20,7 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-htmlmin": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.4",
     "run-sequence": "^2.2.1"
   }
 }
