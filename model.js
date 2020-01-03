@@ -116,7 +116,6 @@ module.exports.SUNNY_COLD = [
 		"4n1bdaKwynQndm47x5HqWX",
 		"0TlLq3lA83rQOYtrqBqSct",
 		"4qKcDkK6siZ7Jp1Jb4m0aL",
-		"3QLjDkgLh9AOEHlhQtDuhs",
 		"4FDSPGncHRpr6yB8DD4CtI",
 		"4EYvuvqzUepdNaUlUZKVve",
 		"73IE87H0g2MBmdn41lkVto",
