@@ -65,12 +65,12 @@ module.exports.SUNNY_WARM = [
 		"4n4BflhWjCHIxrI4v7Xt9s",
 		"0IJLZPSVj1YVHJQAG5BEdw",
 		"4rmVZajAF7PkrCagGPHbqa",
-		"28JBD8p18xNuOfyV7Cotdn".
-		"3F5CgOj3wFlRv51JsHbxhe".
-		"0pPpcDDIiVBeBS5jBecnSC".
-		"2HSmyk2qMN8WQjuGhaQgCk".
-		"6jy9yJfgCsMHdu2Oz4BGKX".
-		"37Nqx7iavZpotJSDXZWbJ3".
+		"28JBD8p18xNuOfyV7Cotdn",
+		"3F5CgOj3wFlRv51JsHbxhe",
+		"0pPpcDDIiVBeBS5jBecnSC",
+		"2HSmyk2qMN8WQjuGhaQgCk",
+		"6jy9yJfgCsMHdu2Oz4BGKX",
+		"37Nqx7iavZpotJSDXZWbJ3",
 		"0k1WUmIRnG3xU6fvvDVfRG",
 		"4s7QLoImIwmPi9L6dq1nVW",
 		"11pEKMLmavDu8fxOB5QjbQ",
