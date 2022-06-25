@@ -63,7 +63,19 @@ module.exports.SUNNY_WARM = [
 		"4D2Z8yUlhaDD81ubWpcRdt",
 		"3W3FVHEDetkiRkkGKDmdir",
 		"4n4BflhWjCHIxrI4v7Xt9s",
-		"0IJLZPSVj1YVHJQAG5BEdw"
+		"0IJLZPSVj1YVHJQAG5BEdw",
+		"4rmVZajAF7PkrCagGPHbqa",
+		"28JBD8p18xNuOfyV7Cotdn".
+		"3F5CgOj3wFlRv51JsHbxhe".
+		"0pPpcDDIiVBeBS5jBecnSC".
+		"2HSmyk2qMN8WQjuGhaQgCk".
+		"6jy9yJfgCsMHdu2Oz4BGKX".
+		"37Nqx7iavZpotJSDXZWbJ3".
+		"0k1WUmIRnG3xU6fvvDVfRG",
+		"4s7QLoImIwmPi9L6dq1nVW",
+		"11pEKMLmavDu8fxOB5QjbQ",
+		"35RJhm1pEovTBwnNR0zWad",
+		"3GjFRgUzylTZO5wqxFt9e0",
 	];
 
 module.exports.SUNNY_COLD = [
@@ -120,7 +132,14 @@ module.exports.SUNNY_COLD = [
 		"4EYvuvqzUepdNaUlUZKVve",
 		"73IE87H0g2MBmdn41lkVto",
 		"2xUHiyGeGrWmmfv7NbDTWC",
-		"3uSSjnDMmoyERaAK9KvpJR"
+		"3uSSjnDMmoyERaAK9KvpJR",
+		"4FIgHqXd4KkOwxrGeLDYM2",
+		"1eCFz60zd7mAXgWLapPd9B",
+		"3N3d4OWbPVxTQVBFqNyykk",
+		"6jy9yJfgCsMHdu2Oz4BGKX",
+		"11pEKMLmavDu8fxOB5QjbQ",
+		"2Q3jFbyE61mCjS3SkW4toJ",
+		"5ScbulRnixQ2XAdvrPMFjz"
 	];
 
 module.exports.COLD = [
@@ -197,7 +216,12 @@ module.exports.COLD = [
 		"0asDOdambse1feMVy3V69s",
 		"53BX9bScZinfUywOiZdm7z",
 		"1qyFlfPREPbRcS2BNszdYI",
-		"0FnxK9FEAQyPJ284QcieNb"
+		"0FnxK9FEAQyPJ284QcieNb",
+		"4VCbgIdr8ptegWeJpqLVHH",
+		"40iJIUlhi6renaREYGeIDS",
+		"34D6FJysnQioVingDKufuf",
+		"42m3eP1JJhtzffal9B136J",
+		"1cCXT1cErAY6tmIqHbodrt",
 	];
 
 module.exports.NIGHT = [
@@ -327,7 +351,19 @@ module.exports.NIGHT = [
 		"18t8ypY0HYaQuGBxg2KdT2",
 		"4czcw3NVLY0of5hTD7OufN",
 		"6MR5IBSNfDmiwnrlQpVw4w",
-		"1Vb6R8COnB8cnrSROqaueY"
+		"1Vb6R8COnB8cnrSROqaueY",
+		"1vbn9fEyw1IYhqgZJdu9ZB",
+		"0nAZGkBGKQCXyaoSJfRhC1",
+		"7sT7kZEYd1MrmzLLIRVZas",
+		"6Yj7Zhxt73uvwFFvzQXdxO",
+		"7hRlTK3mgFTBEjX7DjqBsI",
+		"2vy9Ry1TNjCD85TiCbTz0r",
+		"34D6FJysnQioVingDKufuf",
+		"2tUL6dZf1mywCj5WvCPZw6",
+		"2BcMwX1MPV6ZHP4tUT9uq6",
+		"2Q3jFbyE61mCjS3SkW4toJ",
+		"08XWh5c0BMyD1nKVxxl91z",
+		"3RkNXZvOSMMElmmXztDc94"
 	];
 
 module.exports.RAINY = [
@@ -377,6 +413,10 @@ module.exports.RAINY = [
 		"3sMC6vfTTSa0mMAPTwzDVD",
 		"4Wjhj0WjkyECccfHVIgaTq",
 		"56NDFbD0tCUawnqeU2wcvv",
-		"4alHkxxwAhvoGg3dJCATKV"
+		"4alHkxxwAhvoGg3dJCATKV",
+		"2vy9Ry1TNjCD85TiCbTz0r",
+		"1PDP7mLiAMwhfmgIwzhOm2",
+		"08XWh5c0BMyD1nKVxxl91z",
+		"3RkNXZvOSMMElmmXztDc94"
 	];
 
