@@ -54,8 +54,8 @@ function displayWeatherAndPlaylist(weatherData) {
 		weatherData.temp + "&deg; " + weatherData.summary + "</h1></center>"
 	).hide().fadeIn(2000);
 
-    var src = "https://open.spotify.com/embed?uri=spotify:user:ovoweather:playlist:" + weatherData.playlistURI;
-	$("#playlist").append("<center><h1>Playlist</h1><iframe src='" + src + "' width='400' height='480' frameborder='0' allowtransparency='true'></iframe></center>").hide().fadeIn(2000);
+    var src = "https://open.spotify.com/embed/playlist/" + weatherData.playlistURI;
+	$("#playlist").append("<center><h1>Playlist</h1><iframe style='border-radius:12px' src='" + src + "' width='400' height='480' frameborder='0' allowtransparency='true'></iframe></center>").hide().fadeIn(2000);
 
 	skycons(); // inject skycons for each forecast
 
