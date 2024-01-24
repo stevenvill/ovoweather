@@ -1,6 +1,6 @@
 'use strict';
 
-var request 		= require('request');
+const axios 		= require('axios');
 var model 			= require('./model');
 
 var spotify_id		= "ovoweather";
@@ -23,20 +23,23 @@ var days = [
 exports.authenticate = function(req, res) {
 	// Requesting access token from refresh token
 	var rr = refresh_token;
-	var authOptions = {
-		url: 'https://accounts.spotify.com/api/token',
-		headers: { 'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64')) },
-		form: {
-			grant_type: 'refresh_token',
-			refresh_token: refresh_token
-		},
-		json: true
-	};
-
-	request.post(authOptions, function(error, response, body) {
-		if (!error && response.statusCode === 200) {
-			access_token = body.access_token;
+	var config = {
+		headers: {
+			'Content-Type': 'application/x-www-form-urlencoded',
+			'Authorization': 'Basic ' + btoa(client_id + ':' + client_secret)
 		}
+	};
+	var data = {
+		grant_type: 'refresh_token',
+		refresh_token: refresh_token
+	}
+
+	axios.post('https://accounts.spotify.com/api/token', data, config).then(function (response) {
+		if (response.status === 200) {
+			access_token = response.data.access_token;
+		}
+	}).catch(function (error) {
+  	console.log(error);
 	});
 };
 
@@ -44,22 +47,22 @@ exports.weatherReport = function(req, res) {
 	var latitude  = req.query.lat;
 	var longitude = req.query.long;
 
-	var apiKey       = '803124776bdc3b6d21073e97812ba316',
-		url          = 'https://api.darksky.net/forecast/', // URL IS DIFFERENT FOR UT SERVER, ADDED (https://crossorigin.me/) TO BEGINNING
-		lati         = latitude,
-		longi        = longitude,
-		apiCall      = url + apiKey + "/" + lati + "," + longi;
+	var apiKey       = '06ftug1lQSephN2RcdwXk4bIXUDYX4aG',
+			url          = 'https://api.pirateweather.net/forecast/', // URL IS DIFFERENT FOR UT SERVER, ADDED (https://crossorigin.me/) TO BEGINNING
+			lati         = latitude,
+			longi        = longitude,
+			url          = url + apiKey + "/" + lati + "," + longi;
 
-	request.get(apiCall, function(error, response, body) {
-		var json = JSON.parse(body);
+	axios.get(url).then(function (response) {
+		var data = response.data;
 
-		var date     = new Date(json.daily.data[0].time * 1000),
-			day      = days[date.getDay()],
-			skicons  = json.currently.icon,
-			time     = json.currently.time,
-			humidity = json.currently.humidity,
-			summary  = json.currently.summary,
-			temp     = Math.round(json.currently.temperature);
+		var date     = new Date(data.daily.data[0].time * 1000),
+				day      = days[date.getDay()],
+				skicons  = data.currently.icon,
+				time     = data.currently.time,
+				humidity = data.currently.humidity,
+				summary  = data.currently.summary,
+				temp     = Math.round(data.currently.temperature);
 
 		createSpotifyPlaylist(skicons, temp, function(playlistURI) {
 			res.header('Access-Control-Allow-Origin', 'http://ovoweather.com');
@@ -74,29 +77,33 @@ exports.weatherReport = function(req, res) {
 				'playlistURI': playlistURI
 			});
 		});
+	}).catch(function (error) {
+  	console.log(error);
 	});
 };
 
 // Helper functions
 
 function createSpotifyPlaylist(skicon, temp, callback) {
-	var requestParams = {
-		"url": "https://api.spotify.com/v1/users/" + spotify_id + "/playlists",
-		"headers": {
+	var url = "https://api.spotify.com/v1/users/" + spotify_id + "/playlists"
+	var config = {
+		headers: {
 			"Authorization": "Bearer " + access_token,
 			"Content-Type": "application/json"
-		},
-		"json": true,
-		"body": {
-			"name": "My OVO Weather Playlist",
-			"public": false,
-			"collaborative": false,
-			"description": "Enjoy the weather."
 		}
-	};
+	}
+	var data = {
+		"name": "My OVO Weather Playlist",
+		"public": false,
+		"collaborative": false,
+		"description": "Enjoy the weather."
+	}
 
-	request.post(requestParams, function(error, response, body) {
-		addTracks(skicon, temp, body.id, callback);
+	axios.post(url, data, config).then(function (response) {
+		var data = response.data;
+		addTracks(skicon, temp, data.id, callback);
+	}).catch(function (error) {
+  	console.log(error);
 	});
 }
 
@@ -135,20 +142,21 @@ function addTracks(skicon, temp, playlistId, callback) {
 		uris[i] = "spotify:track:" + playlist[rand];
 	}
 
-	var requestParams = {
-		"url": "https://api.spotify.com/v1/users/" + spotify_id + "/playlists/" + playlistId + "/tracks",
-		"headers": {
+	var url = "https://api.spotify.com/v1/users/" + spotify_id + "/playlists/" + playlistId + "/tracks"
+	var config = {
+		headers: {
 			"Authorization": "Bearer " + access_token,
 			"Content-Type": "application/json"
-		},
-		"json": true,
-		"body": {
-			"uris": uris
 		}
-	};
+	}
+	var data = {
+		"uris": uris
+	}
 
-	request.post(requestParams, function(error, response, body) {
+	axios.post(url, data, config).then(function (response) {
 		callback(playlistId);
+	}).catch(function (error) {
+  	console.log(error);
 	});
 }
 
